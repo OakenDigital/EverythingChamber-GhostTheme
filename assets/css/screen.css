@@ -42,6 +42,7 @@ production stylesheet in assets/built/screen.css
     --color-border: #e1e1e1;
     --color-wash: #e5eff5;
     --color-darkmode: #151719;
+    --color-brand: #265881;
 
     /*
     An accent color is also set by Ghost itself in
@@ -123,6 +124,23 @@ production stylesheet in assets/built/screen.css
     min-height: 560px;
     background-color: var(--ghost-accent-color);
     color: #fff;
+    margin-top: 5rem;
+}
+
+.has-cover .site-header-content img {
+    opacity: 0.9;
+}
+
+.has-cover .site-header-content .skrim {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    /* fade the background from the bottom up so this only tints the bottom 50% of the hero */
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 .site-header-content.left-aligned {
@@ -281,7 +299,7 @@ production stylesheet in assets/built/screen.css
     right: 0;
     left: 0;
     z-index: 2000;
-    background-color: transparent;
+    background-color: var(--ghost-accent-color);
     color: #fff;
 }
 
@@ -311,6 +329,7 @@ production stylesheet in assets/built/screen.css
 
 .is-head-left-logo.home-template .gh-head:not(.is-header-hidden) .gh-head-menu {
     margin-left: -40px;
+
 }
 
 @media (min-width: 992px) {
@@ -400,7 +419,7 @@ production stylesheet in assets/built/screen.css
 .gh-head-brand {
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 70px;
     word-break: break-all;
 }
 
@@ -422,7 +441,7 @@ production stylesheet in assets/built/screen.css
 }
 
 .gh-head-logo img {
-    max-height: 40px;
+    max-height: 70px;
 }
 
 
@@ -434,6 +453,10 @@ production stylesheet in assets/built/screen.css
     align-items: center;
     margin-top: 1px;
     font-weight: 500;
+}
+
+.is-head-left-logo-show .gh-head-menu {
+  justify-content: flex-end;
 }
 
 .gh-head-menu .nav {
@@ -2054,7 +2077,7 @@ iframe.instagram-media + script + :not([id]) {
     padding-top: 48px;
     padding-bottom: 140px;
     color: #fff;
-    background: color-mod(var(--color-darkgrey) l(-5%));
+    background: var(--color-brand);
 }
 
 .page-template .site-footer {
