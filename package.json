@@ -125,11 +125,31 @@
                 "default": "Everything Chamber",
                 "group": "homepage"
             },
-            "homepage_hero_tagline": {
+            "homepage_hero_description": {
               "type": "text",
-              "default": "",
+              "default": "Your Hub for Networking, Advocacy, and Growth",
               "group": "homepage"
-          },
+            },
+            "homepage_hero_link_primary_text": {
+              "type": "text",
+              "default": "signup",
+              "group": "homepage"
+            },
+            "homepage_hero_link_primary_url": {
+              "type": "text",
+              "default": "https://membership.mansfieldbusinessalliance.org",
+              "group": "homepage"
+            },
+            "homepage_hero_link_secondary_text": {
+              "type": "text",
+              "default": "learn more",
+              "group": "homepage"
+            },
+            "homepage_hero_link_secondary_url": {
+              "type": "text",
+              "default": "/membership-benefits",
+              "group": "homepage"
+            },
             "header_style": {
                 "type": "select",
                 "options": [

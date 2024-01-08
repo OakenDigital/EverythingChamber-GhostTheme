@@ -49,6 +49,7 @@ production stylesheet in assets/built/screen.css
   --color-brand: #265881;
   --color-brand-rich: #19407a;
   --color-blue-10: #0880ea;
+  --color-brand-rich-light: rgb(55, 102, 173);
 
   /*
     An accent color is also set by Ghost itself in
@@ -108,7 +109,7 @@ html {
 }
 
 .site-header-cover {
-  @apply absolute inset-0 z-0 min-w-full object-cover;
+  @apply md:absolute inset-0 z-0 min-w-full object-cover;
 }
 
 .site-header-content {
@@ -2097,29 +2098,24 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .page-template .site-footer {
-  margin-top: 0;
+  @apply mt-0;
 }
 
 .site-footer .inner {
-  display: grid;
-  grid-gap: 40px;
-  grid-template-columns: auto 1fr auto;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.3rem;
+  @apply grid gap-6 grid-cols-3 max-w-6xl mx-auto text-white/70 text-base;
 }
 
 .site-footer .copyright a {
-  color: #fff;
+  @apply text-white font-semibold;
   letter-spacing: -0.015em;
-  font-weight: 500;
 }
 
 .site-footer a {
-  color: rgba(255, 255, 255, 0.7);
+  @apply text-white/70;
 }
 
 .site-footer a:hover {
-  color: rgba(255, 255, 255, 1);
+  @apply text-white;
   text-decoration: none;
 }
 
@@ -2159,18 +2155,14 @@ iframe.instagram-media + script + :not([id]) {
 
 @media (max-width: 767px) {
   .site-footer .inner {
-    max-width: 500px;
-    grid-template-columns: 1fr;
-    grid-gap: 0;
-    text-align: center;
+    @apply max-w-lg grid-cols-1 gap-0 text-center;
   }
   .site-footer .copyright,
   .site-footer .copyright a {
-    color: #fff;
-    font-size: 1.5rem;
+    @apply text-white text-base;
   }
   .site-footer .copyright {
-    margin-bottom: 16px;
+    @apply mb-4;
   }
 }
 
@@ -3093,7 +3085,7 @@ html.dark-mode .footer-cta-title {
 }
 
 .gh-btn {
-  @apply md:text-lg py-3 md:py-4 px-6 md:px-8 text-white font-semibold leading-none rounded-md;
+  @apply md:text-lg py-3 md:py-4 px-6 md:px-8 text-white font-semibold leading-none rounded-md capitalize;
 }
 
 .gh-btn-primary {
@@ -3101,22 +3093,17 @@ html.dark-mode .footer-cta-title {
 }
 
 .gh-btn-secondary {
-  @apply bg-black/30 border border-white hover:bg-white;
+  @apply bg-black/30 border border-white hover:bg-blue-700/30;
 }
 
 /* 13 Homepage Template
 /* ---------------------------------------------------------- */
 .hp-hero {
-  @apply w-full h-[50vw] flex flex-col justify-end relative text-lg;
+  @apply w-full h-auto md:h-[50vw] flex flex-col justify-end relative text-lg overflow-y-hidden;
 }
 
 .hp-hero-inner {
-  @apply flex flex-col space-y-2 justify-end text-white z-20 py-4 px-4 md:py-10 md:px-20;
-  background-image: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
+  @apply flex flex-col space-y-4 justify-end text-white z-20 py-4 pb-8 px-4 md:py-10 md:px-20 bg-[#19407a] md:bg-transparent md:bg-gradient-to-b md:from-transparent md:to-black/80;
 }
 
 .hp-hero-inner h1 {
@@ -3124,23 +3111,11 @@ html.dark-mode .footer-cta-title {
 }
 
 .hp-hero-inner p {
-  line-height: 1.6;
+  @apply leading-relaxed max-w-xl pb-4;
 }
 
 .hp-secondary {
-  color: var(--color-white);
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  margin: 0 auto 5rem;
-  max-width: 1000px;
-  background-image: linear-gradient(
-    180deg,
-    rgb(55, 102, 173) 0%,
-    var(--color-brand-rich) 100%
-  );
-  padding: 6rem 4rem;
-  position: relative;
+  @apply w-full text-white flex flex-col items-center relative mx-auto my-[5rem] mt-0 bg-gradient-to-b from-[var(--color-brand-rich-light)] to-[var(--color-brand-rich)] p-12 md:px-[4rem] md:py-[6rem];
 }
 
 .hp-secondary .inner {

@@ -8,12 +8,14 @@
   {{/if}}
   <div class="hp-hero-inner">
     {{#if @custom.homepage_hero_title}}
-    <h1>{{@custom.homepage_hero_title}}</h1>
+      <h1>{{@custom.homepage_hero_title}}</h1>
     {{/if}}
-    <p>Your Hub for Networking, Advocacy, and Growth</p>
+    {{#if @custom.homepage_hero_description}}
+      <p>{{@custom.homepage_hero_description}}</p>
+    {{/if}}
     <div class="flex space-x-6 items-center">
-      <a href="#/portal/signup" class="gh-btn gh-btn-primary">Join Now</a>
-      <a href="#/portal/signup" class="gh-btn gh-btn-secondary">Learn More</a>
+        <a href="{{@custom.homepage_hero_link_primary_url}}" class="gh-btn gh-btn-primary">{{@custom.homepage_hero_link_primary_text}}</a>
+        <a href="{{@custom.homepage_hero_link_secondary_url}}" class="gh-btn gh-btn-secondary">{{@custom.homepage_hero_link_secondary_text}}</a>
     </div>
   </div>
 </div>
