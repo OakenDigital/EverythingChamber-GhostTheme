@@ -1,5 +1,5 @@
 {
-    "name": "casper",
+    "name": "everything-chamber",
     "description": "A clean, minimal default theme for the Ghost publishing platform",
     "demo": "https://demo.ghost.io",
     "version": "5.7.0",
@@ -60,7 +60,8 @@
         "postcss": "8.2.13",
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "4.0.0",
-        "pump": "3.0.0"
+        "pump": "3.0.0",
+        "tailwindcss": "^3.4.1"
     },
     "browserslist": [
         "defaults"
@@ -119,6 +120,16 @@
                 "default": true,
                 "group": "homepage"
             },
+            "homepage_hero_title": {
+                "type": "text",
+                "default": "Everything Chamber",
+                "group": "homepage"
+            },
+            "homepage_hero_tagline": {
+              "type": "text",
+              "default": "",
+              "group": "homepage"
+          },
             "header_style": {
                 "type": "select",
                 "options": [
